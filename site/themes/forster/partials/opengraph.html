@@ -1,0 +1,8 @@
+<meta name="description" content="{{if meta_description}}{{meta_description | entitites }}{{elseif introduction}}{{introduction | entities }}{{elseif content_rich}}{{ content_rich }}{{ if type=="text" }}{{ if first }}{{ text | strip_tags | safe_truncate:150:... }}{{/if}}{{/if}}{{ /content_rich }}{{else}}{{site_description}}{{/if}}">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{title}} | {{ site_name }}" />
+<meta property="og:description" content="{{if meta_description}}{{meta_description | entities }}{{elseif introduction}}{{introduction | entities }}{{elseif content_rich}}{{ content_rich }}{{ if type=="text" }}{{ if first }}{{ text | strip_tags | safe_truncate:150:... }}{{/if}}{{/if}}{{ /content_rich }}{{else}}{{site_description | entities }}{{/if}}" />
+<meta property="og:site_name" content="{{ site_name}} | Specialists in Legal Assistance & Policy Development" />
+<meta property="og:locale" content="en" />
+<meta property="og:image" content="{{if opengraph_image}}{{ opengraph_image | get:permalink }}{{ elseif parent:opengraph_image:exists }}{{parent}}{{ opengraph_image }}{{/parent}}{{ else }}{{ global_opengraph_image | get:permalink }}{{/if}}" />
+<meta property="og:url" content="{{ permalink }}" />

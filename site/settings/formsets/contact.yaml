@@ -1,0 +1,31 @@
+title: 'Contact Form'
+fields:
+  name:
+    display: Name
+    validate: required
+    width: 4
+    type: text
+  phone_number:
+    display: 'Phone Number'
+    validate: required
+    width: 4
+    type: text
+  email_address:
+    display: 'Email Address'
+    validate: email
+    width: 4
+    type: text
+  message:
+    display: Message
+    width: 12
+    type: textarea
+columns:
+  - name
+  - email_address
+email:
+  -
+    to: warren@forster.co.nz
+    from: '{{noreply@forster.co.nz}}'
+    reply_to: '{{email_address}}'
+    subject: 'Forster.co.nz Website Form Submission'
+    template: email

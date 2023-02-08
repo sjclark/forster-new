@@ -1,0 +1,71 @@
+title: Globals
+hide: true
+sections:
+  main:
+    display: Main
+    fields:
+      site_name:
+        type: text
+        display: 'Website Name'
+        instructions: 'The name of your website'
+        localizable: true
+        width: 50
+      site_description:
+        type: textarea
+        display: 'Website Description'
+        instructions: 'A generalised blurb about the site - will be used by Google for indexing'
+        width: 50
+      footer_quicklinks:
+        mode: table
+        fields:
+          name:
+            type: text
+            display: Name
+          link:
+            type: text
+            display: 'Link / URL'
+            validate: url
+        type: grid
+        display: 'Footer Quicklinks'
+        width: 50
+      underlogo_quicklinks:
+        mode: table
+        fields:
+          name:
+            type: text
+            display: Name
+          pages:
+            type: pages
+            display: 'Choose Page'
+        type: grid
+        display: 'Underlogo Quicklinks'
+        width: 50
+      prefooter_links:
+        mode: table
+        fields:
+          name:
+            type: text
+            display: Name
+          blurb:
+            type: textarea
+            display: Blurb
+          pages:
+            type: pages
+            display: 'Choose Page'
+          icon:
+            type: assets
+            display: 'Select Icon'
+            container: theme_assets
+            max_files: 1
+        type: grid
+        display: 'Pre-Footer Links'
+        instructions: 'The Links Just above the Footer - and Also on the Homepage!'
+      global_opengraph_image:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        instructions: 'Default Image shown on Social Media for Posts'
+        display: 'OpenGraph Image'
+taxonomies: true

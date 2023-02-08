@@ -1,0 +1,90 @@
+footer {
+  margin-top: 3rem;
+}
+
+.footer-navbar {
+  display: none;
+
+  @include desktop {
+    display: flex;
+  }
+}
+
+.pre-footer {
+  background-color: transparentize($blue, 0.9);
+}
+
+.footer {
+  background-color: $blue;
+  color: white;
+  border-top: 2px solid transparentize($color: white, $amount: 0.8);
+
+  a {
+    color: white;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  .columns {
+    margin-bottom: 0px;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    @include mobile {
+      border-bottom: 2px solid transparentize($color: white, $amount: 0.8);
+    }
+@include tablet {
+    &:not(:last-of-type) {
+      border-right: 2px solid transparentize($color: white, $amount: 0.8);
+    }
+  }
+    .column {
+      border: none;
+    }
+  }
+}
+
+.footer-contact {
+  a {
+    display: block;
+    font-weight: bold;
+  }
+
+  div {
+    padding-bottom: 0.5rem;
+  }
+}
+
+.footer-quicklinks {
+  &__header {
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    padding: 0.25rem 0rem;
+    display: block;
+  }
+}
+
+.footer-first {
+  img {
+    margin-bottom: 1rem;
+  }
+}
+
+.post-footer {
+  background-color: $blue;
+  border-top: 2px solid transparentize($color: white, $amount: 0.8);
+  font-size: 80%;
+  padding: 1rem;
+  color: transparentize($color: white, $amount: 0.2);
+}

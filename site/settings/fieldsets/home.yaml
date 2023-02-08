@@ -1,0 +1,49 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        type: text
+        width: 50
+        localizable: true
+      subtitle:
+        type: text
+        width: 50
+      image:
+        type: assets
+        display: 'Select Header Image'
+        container: main
+        max_files: 1
+        width: 25
+        instructions: 'The image will be automatically re-sized to appropriate web size'
+      home_navlinks:
+        type: replicator
+        display: 'Homepage Navigation Links'
+        width: 75
+        instructions: 'Please don''t include more than 4asads'
+        sets:
+          nav_item:
+            display: 'Navigation Item'
+            replicator_preview: false
+            fields:
+              heading:
+                type: text
+              blurb:
+                type: textarea
+              icon:
+                type: assets
+                display: 'Select Icon'
+                container: theme_assets
+                max_files: 1
+              link_destination:
+                depth: '1'
+                max_items: 1
+                type: pages
+                display: 'Link Destination'
+                validate: required
+      content:
+        type: markdown
+taxonomies: true
+title: Home
+create_title: Home
+hide: true

@@ -1,0 +1,5 @@
+environments:
+  - production
+git_push: true
+git_username: 'Sam Clark'
+git_email: sam@astronaut.nz

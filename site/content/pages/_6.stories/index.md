@@ -1,0 +1,7 @@
+title: Stories
+navigation_location: hidden
+section_icon: /assets/theme-assets/icon-stories.svg
+fieldset: section
+mount: stories
+is_hidden: true
+id: 0841a9e4-8a34-4e3f-a3ee-050a5a3a3b81

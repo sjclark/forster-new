@@ -1,0 +1,23 @@
+.tabs {}
+
+.subnav {
+  background: rgba(13, 102, 151, 0.08);
+  box-shadow: inset 0 1px 10px 0 rgba(13, 102, 151, 0.10);
+  border-bottom: 1px solid $blue;
+
+  @include touch {
+    display: none;
+  }
+}
+
+.tabs a {
+  border-bottom: 2px solid transparent;
+}
+
+.tabs a:hover {
+  background-color: transparentize($color: $blue, $amount: 0.9)
+}
+
+.tabs a.is-active {
+  border-bottom: 2px solid $blue;
+}

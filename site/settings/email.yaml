@@ -1,0 +1,5 @@
+driver: mailgun
+from_email: warren@forster.co.nz
+from_name: 'Forster & Associates Website'
+mailgun_secret: key-a78a854b0c37b5b846c3aedb5d61c7f2
+mailgun_domain: forster.co.nz

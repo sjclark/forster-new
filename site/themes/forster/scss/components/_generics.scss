@@ -1,0 +1,22 @@
+a:focus,
+a:focus *,
+a.button:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+  color: black;
+  text-decoration: underline;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  margin-bottom: auto;
+}

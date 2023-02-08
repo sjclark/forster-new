@@ -1,0 +1,29 @@
+<!-- Page Content Begins -->
+<section class="section" id="page-content">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8">
+        <div class="content is-medium">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="container section-navbox">
+    <ul class="columns is-multiline">
+      {{ pages }}
+
+
+      <li class="column is-4">
+        <div class="navbox">
+          <a href="{{ url }}">
+            <div class="title is-5 is-marginless" aria>{{ title }}</div>
+            <p>{{ section_blurb }}</p>
+          </a>
+        </div>
+      </li>
+      {{ /pages }}
+    </ul>
+  </nav>
+
+</section>

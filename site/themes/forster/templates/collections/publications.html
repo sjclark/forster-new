@@ -1,0 +1,50 @@
+<section class="section">
+  <div class="container">
+    {{ content }}
+
+    {{ collection:publications sort="mediadate:desc" limit="10" paginate="true" as="items" show_future="true"}}
+
+    {{items}}
+    <div class="columns">
+      {{ if media_thumbnail }}
+      <div class="column is-2">
+        <a class="media_link" href="{{ media_link }}">
+          <img src="{{ glide:media_thumbnail width="150" height="150" fit="crop" }}">
+        </a>
+      </div>
+      {{/if}}
+      <section class="column is-8">
+        <a class="media_link" href="{{ media_link }}">
+          <h2 class="title is-4 is-marginless">{{ title }}</h2>
+        </a>
+        <div>{{ mediadate format="l, F j Y" }} -
+          <span>{{ if media_author }}{{ media_author}}, {{/if}}{{ media_outlet }}</span>
+        </div>
+
+        <div class="content media_content">
+          {{ media_blurb }}
+        </div>
+        <a class="media_link" href="{{ media_link }}">{{ media_link }}</a>
+        <hr>
+      </section>
+
+    </div>
+
+
+    {{/items}}
+
+    {{ paginate }}
+    {{ if prev_page }}
+    <a href="{{ prev_page }}">⬅ Previous</a>
+    {{ /if }}
+    {{ if total_pages > 1 }}
+    {{ current_page }} of {{ total_pages }} pages
+    {{ if next_page }}
+    <a href="{{ next_page }}">Next ➡</a>
+    {{ /if }}
+    {{/if}}
+    {{ /paginate }}
+
+    {{ /collection:publications }}
+  </div>
+</section>

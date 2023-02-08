@@ -1,0 +1,27 @@
+.content a {
+  border-bottom: 3px solid transparentize($color: $blue, $amount: 0.8);
+  transition: background-color .15s;
+
+  &:hover {
+    background-color: transparentize($color: $blue, $amount: 0.90);
+    transition: background-color .15s;
+    color: $blue;
+  }
+
+  &:focus {
+    border-bottom: none;
+  }
+}
+
+.content-introduction {
+  padding-bottom: 2rem;
+}
+
+#mc_embed_signup {
+  padding: 2rem;
+  background-color: transparentize($color: $blue, $amount: 0.95);
+  border: 1px solid transparentize($color: $blue, $amount: 0.8);
+
+  input[type='submit'] {}
+
+}

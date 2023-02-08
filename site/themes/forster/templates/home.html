@@ -1,0 +1,92 @@
+<div class="home-hero" style="background-image: url('{{ glide :src="image" width="1500" height="700" fit="crop" }}')">
+    <div class="home-hero-overlay"></div>
+    <div class="container">
+        <div class="home-hero-content">
+            <h1 class="title is-2">Warren Forster</h1>
+            <div class="subtitle is-3">{{subtitle}}</div>
+        </div>
+    </div>
+</div>
+<div class="container home-boxes">
+    <div class="columns">
+
+        {{ home_navlinks }}
+
+        <nav class="column">
+{{ relate:link_destination }}
+            <a href="{{ url }}" class="home-box" style="background-image: url('{{ icon }}');">
+{{ /relate:link_destination }}
+                <h3 class="home-box__heading">{{ heading }}</h3>
+                <p>{{ blurb }}</p>
+            </a>
+        </nav>
+        {{ /home_navlinks}}
+
+    </div>
+</div>
+<section class="section pre-footer pre-footer-home">
+    <div class="container">
+        <div class="columns is-vcentered is-variable is-8">
+
+            {{ prefooter_links }}
+            {{ relate:pages }}
+            <div class="column">
+                <a href="{{ url }}">
+                    <div class="columns is-vcentered is-mobile is-variable">
+                        <div class="column is-2">
+                            {{ asset:icon}}
+                            <img src="{{url}}" alt="">
+                            {{ /asset:icon}}
+                        </div>
+                        <div class="column">
+                            <div class="title is-5 is-marginless">{{ name }}</div>
+                            <p>{{ blurb }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {{ /relate:pages }}
+            {{ /prefooter_links }}
+
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        {{ collection:publications sort="mediadate:desc" limit="2" as="items"}}
+
+        {{items}}
+        <section class="columns">
+            {{ if media_thumbnail }}
+            <div class="column is-2">
+                <a class="media_link" href="{{ media_link }}">
+                    <img src="{{ glide:media_thumbnail width=" 150" height=" 150" fit=" crop" }}"="crop" }}"">
+                </a>
+            </div>
+            {{/if}}
+            <div class="column">
+                <a class="media_link" href="{{ media_link }}">
+                    <h2 class="title is-4 is-marginless">{{ title }}</h2>
+                </a>
+                <div>{{ mediadate format="l, F j Y" }}
+                    -
+                    <span>
+                        {{ if media_author }}{{ media_author}},
+                        {{/if}}{{ media_outlet }}</span>
+                </div>
+
+                <div class="content media_content">
+                    {{ media_blurb }}
+                </div>
+                <a class="media_link" href="{{ media_link }}">{{ media_link }}</a>
+            </div>
+        </section>
+        <br>
+
+        {{/items}}
+
+        {{ /collection:publications }}
+
+    </div>
+</section>

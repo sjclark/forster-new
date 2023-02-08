@@ -1,0 +1,31 @@
+<section class="section" id="page-content">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8">
+        <div class="content content-introduction is-medium">
+          {{ introduction }}
+        </div>
+        <article class="content content-primary" aria-labelledby="aria-primary-title">
+          {{content}}
+        </article>
+      </div>
+
+      {{ if related_links }}
+      <div class="column is-offset-1">
+        <aside>
+          <nav class="panel" aria-label="Related Navigation">
+            <div class="panel-heading">{{related_links_name}}</div>
+            <ul>
+              {{ related_links as="links"}}
+              <li><a href="{{link}}" class="panel-block">{{text}}</a></li>
+              {{ /related_links }}
+            </ul>
+          </nav>
+        </aside>
+      </div>
+      {{ /if }}
+
+
+    </div>
+  </div>
+</section>

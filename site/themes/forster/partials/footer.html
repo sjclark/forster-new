@@ -1,0 +1,105 @@
+<footer>
+  {{ if hide_prefooter != true}}
+  <section class="section pre-footer">
+    <div class="container">
+      <div class="columns is-vcentered is-variable is-8">
+
+        {{ prefooter_links }}
+        {{ relate:pages }}
+        <div class="column">
+          <a href="{{ url }}">
+            <div class="columns is-vcentered is-mobile is-variable">
+              <div class="column is-2">
+                {{ asset:icon}}
+                <img src="{{url}}" alt="">
+                {{ /asset:icon}}
+              </div>
+              <div class="column">
+                <div class="title is-5 is-marginless">{{ name }}</div>
+                <p>{{ blurb }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        {{ /relate:pages }}
+        {{ /prefooter_links }}
+
+      </div>
+    </div>
+  </section>
+  {{ /if}}
+
+  <div class="footer">
+    <div class="container">
+      <div class="columns">
+
+        <div class="column footer-first">
+          <div class="columns is-mobile">
+            <div class="column is-8">
+              <div>
+                <img style="width: 150px; max-width: auto" src="/assets/theme-assets/warren-logo-invert.svg" alt="">
+              </div>
+            </div>
+            <div class="column is-4">
+              <a href="https://www.lawfoundation.org.nz/" title="New Zealand Law Foundation"><img style="width: 100px; max-width: auto" src="/assets/theme-assets/law_foundation.jpg"
+                  alt=""></a>
+            </div>
+          </div>
+          <nav>
+            {{ underlogo_quicklinks }}
+            {{ relate:pages }}
+            <a href="{{ url }}">{{ name}}</a>
+            {{ /relate:pages }}
+            {{ /underlogo_quicklinks }}
+          </nav>
+        </div>
+
+        <div class="column footer-quicklinks">
+          <div class="footer-quicklinks__header" id="aria-quicklinks">QUICKLINKS</div>
+          <nav aria-labelledby="aria-quicklinks">
+            <ul>
+              {{ footer_quicklinks }}
+              <li><a href="{{ link }}">{{ name }}</a></li>
+              {{ /footer_quicklinks }}
+            </ul>
+          </nav>
+        </div>
+
+        <!--<div class="column has-text-right-tablet footer-contact">
+          <div>
+            <a href="tel:03435435">04 979 9209</a>
+            <a href="mailto:info@forster.co.nz">
+              info@forster.co.nz
+            </a>
+          </div>
+          <div>
+            <b>Wellington Office</b><br>
+            PO Box 23, Wellington, 6140
+          </div>
+          <div>
+            <b>Dunedin Office</b><br>
+            PO Box 5949, Dunedin, 9058
+          </div>
+        </div>-->
+
+      </div>
+    </div>
+  </div>
+
+  <div class="post-footer">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          © {{ current_date format='Y' }} Warren Forster. All Rights Reserved.
+        </div>
+        <div class="column has-text-right-tablet">
+          Website by Astronaut Digital
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</footer>
+</div><!-- End Site Wrapper -->

@@ -1,0 +1,7 @@
+stache_always_update: true
+static_caching_enabled: true
+stache_lock_enabled: true
+stache_lock_wait_length: 30
+static_caching_lock_hold_length: 0
+static_caching_exclude:
+  - /contact

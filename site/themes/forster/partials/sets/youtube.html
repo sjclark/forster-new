@@ -1,0 +1,8 @@
+{{ if video | is_embeddable }}
+<!-- Youtube and Video -->
+<iframe width="100%" height="400" src="{{ video | embed_url }}" allow="autoplay; encrypted-media" allowfullscreen title="{{title}}""></iframe>
+{{ else }}
+<!-- Other HTML5 video types -->
+<video width="
+  100%" height="400" src="{{ video | embed_url }}" ...></video>
+  {{ /if }}

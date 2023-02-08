@@ -1,0 +1,91 @@
+<div class="section">
+    <div class="container">
+        <div class="columns">
+
+            <div class="column is-8">
+                <article class="content-primary" aria-labelledby="aria-primary-title">
+                    {{ content_rich }}
+                    {{ partial src="sets/{type}" }}
+                    {{ /content_rich }}
+
+                </article>
+                <br>
+                {{ form:create in="contact" }}
+
+                {{ if errors }}
+                <div class="notification is-warning">
+                    {{ errors }}
+                    {{ value }}<br>
+                    {{ /errors }}
+                </div>
+                {{ /if }}
+
+                {{ if success }}
+                <div class="notification is-success">
+                    Form was submitted successfully.
+                </div>
+                {{ /if }}
+
+                <div class="columns is-multiline">
+                    {{ fields }}
+                    {{if type=="text"}}
+                    <div class="column is-{{width}}">
+                        <div class="field">
+                            <label for="{{name}}">{{ display }}
+                                {{ if validate=="required"}}
+                                <small class="has-text-grey">
+                                    (required)</small>
+                                {{/if}}
+                            </label>
+                            <div class="control">
+                                <input type="{{type}}" id="{{name}}" class="input" name="{{ name }}" value="{{ if placeholder}}{{placeholder}} {{else}}{{ old }}{{/if}}" />
+                                {{ if note }}
+                                <p class="help">{{note}}</p>
+                                {{/if}}
+
+                            </div>
+                        </div>
+                    </div>
+                    {{else}}
+                    <div class="column is-{{width}}">
+                        <div class="field">
+                            <label for="{{name}}">{{ display }}
+                                {{ if validate=="required"}}
+                                <small class="has-text-grey">
+                                    (required)</small>
+                                {{/if}}
+                            </label>
+                            <div class="control">
+                                <textarea class="textarea" id="{{name}}" name="{{name}}">{{old}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{ /fields }}
+                    <div class="column is-12">
+                        {{ recaptcha }}
+                    </div>
+                    <div class="column is-12">
+                        <div class="buttons">
+                            <button class="button is-primary">Submit Enquiry</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                {{ /form:create }}
+            </div>
+            <div class="column is-4 is-offset-1">
+                <div class="content">
+                    {{ contact_sidebar|markdown }}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- everything between these tags will disappear from your template... -->
+    {{ section:page_scripts }}
+    {{ recaptcha:head }}
+    {{ /section:page_scripts }}

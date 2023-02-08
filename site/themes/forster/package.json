@@ -1,0 +1,33 @@
+{
+  "name": "arcade",
+  "version": "1.0.0",
+  "main": "js/main.js",
+  "author": "Sam Clark - Astronaut Digital",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "bulma": "^0.9.4",
+    "cross-env": "*",
+    "laravel-mix": "*",
+    "mburger-css": "^1.3.3",
+    "mmenu-js": "^8.4.3"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "laravel-mix-purgecss": "*",
+    "postcss": "^8.1",
+    "resolve-url-loader": "*",
+    "sass": "*",
+    "sass-loader": "*",
+    "vue-template-compiler": "*"
+  }
+}

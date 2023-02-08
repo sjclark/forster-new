@@ -1,0 +1,91 @@
+.navbar-logo {
+  @include touch {
+    padding: 0.5rem;
+    max-width: 150px;
+
+  }
+
+  img {
+    display: block
+  }
+
+  @include desktop {
+    padding: 1.5rem 3rem 0.75rem 0.75rem;
+    margin-bottom: -1rem;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.11);
+    background-color: white;
+  }
+
+}
+
+.navbar-primary {
+  .navbar-start {
+    margin-left: 2rem;
+    font-weight: bold;
+  }
+
+  .navbar-logo {
+    transition: .3s all;
+
+    &:hover {
+      transform: translateY(-5px);
+      transition: .3s all;
+    }
+  }
+}
+
+
+
+.navbar-item.is-active {
+  border-bottom: 5px solid white;
+}
+
+.skip-to-content {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  display: block;
+  padding: 10px 15px;
+
+  &:focus {
+    outline: 3px solid #ffbf47;
+    outline-offset: 0;
+    background-color: #ffbf47;
+    position: static;
+    width: auto;
+    height: auto;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    white-space: inherit;
+  }
+}
+
+.mm-menu {
+  background-color: $blue;
+}
+
+#mobile-menu:not(.mm-menu) {
+  display: none;
+}
+
+.hamburger {
+  color: white;
+  @include desktop {
+    display: none;
+  }
+
+  margin-left: auto;
+}
+
+.site-wrapper {
+  background-color: white;
+}

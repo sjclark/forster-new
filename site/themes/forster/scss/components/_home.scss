@@ -1,0 +1,111 @@
+.home-hero {
+  width: 100%;
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.29);
+
+  @include desktop {
+    height: 500px;
+  }
+
+  height: 400px;
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(11, 100, 149, 0.22);
+  }
+
+  &-content {
+    background-color: transparentize($color: $blue, $amount: 0.2);
+    display: block;
+    padding: 0.5rem;
+    width: 550px;
+    max-width: 80%;
+    position: relative;
+    top: 50px;
+
+    @include desktop {
+      top: 300px;
+    }
+
+    .title,
+    .subtitle {
+      color: white;
+      line-height: 2.2rem;
+      box-shadow: 0 0px 0px 0 transparentize(pink, 0.8);
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      top: 0;
+      left: -1000px;
+      right: 100%;
+      bottom: 0;
+      background: transparentize($color: $blue, $amount: 0.2);
+    }
+  }
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: -40px;
+    opacity: 0.29;
+    background: #0d6697;
+  }
+}
+
+.home-boxes {
+  margin-top: -4rem;
+
+  @include tablet {
+    margin-bottom: -10rem;
+  }
+}
+
+.home-box {
+  background-color: $blue;
+  border-top: 5px solid white;
+  padding: 1rem 1.5rem;
+  display: block;
+  color: white;
+  text-align: center;
+  transition: all 0.5s;
+  box-shadow: 0 10px 30px 0 transparentize($blue, 0.8);
+  height: 100%;
+  position: relative;
+  background-position: -10% 50%;
+  background-repeat: no-repeat;
+  background-size: 40%;
+
+  font-size: 110%;
+
+  &__heading {
+    font-weight: bold;
+    font-size: 160%;
+    line-height: 2rem;
+  }
+
+  &:hover {
+    background-color: white;
+    color: $blue;
+    transition: all 0.5s;
+    border-top: 5px solid $blue;
+    transform: translateY(-5px);
+  }
+}
+
+.pre-footer-home {
+  @include tablet {
+    padding-top: 12rem;
+  }
+}

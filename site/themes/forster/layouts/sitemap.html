@@ -1,0 +1,31 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {{ nav from="/" include_home="true" }}
+  <url>
+    <loc>{{ permalink }}</loc>
+    <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>{{ if url == homepage }}0.9{{ else }}0.7{{ /if }}</priority>
+  </url>
+  {{ if mount }}
+  {{ collection :from="mount" }}
+  {{ if url != parent }}
+  <url>
+    <loc>{{ permalink }}</loc>
+    <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {{/if }}
+  {{ /collection }}
+  {{ /if }}
+  {{ if children }}
+  {{ *recursive children* }}
+  {{ /if }}
+  {{ /nav }}
+</urlset>
+
+{{#
+Only includes collections that are mounted?
+Also checks to make sure that the route is not just the homepage?
+For example non-routable ones will be ignored?
+#}}

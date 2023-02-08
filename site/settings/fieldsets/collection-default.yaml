@@ -1,0 +1,35 @@
+sections:
+  main:
+    display: Main
+    fields:
+      template:
+        type: hidden
+        default: content
+      title:
+        display: Title
+        type: text
+        width: 50
+        validate: required
+        localizable: true
+      subtitle:
+        type: text
+        width: 50
+        display: Sub-Title
+      introduction:
+        type: textarea
+        display: Introduction
+        instructions: '(Optional) Displayed in a larger font above the main page content'
+      content:
+        type: markdown
+        display: Page Content
+  sidebar:
+    display: Sidebar
+    fields:
+      section_blurb:
+        type: textarea
+        display: 'Section Blurb'
+        instructions: 'This is the blurb that will be displayed on the (parent) section of this page.'
+taxonomies: true
+title: Collection Page Generic
+create_title: Collection Page Generic
+hide: true
