@@ -1,0 +1,68 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          display: Title
+          width: 50
+          validate: required
+          localizable: true
+      -
+        handle: subtitle
+        field:
+          type: text
+          width: 50
+          display: Sub-title
+      -
+        handle: content
+        field:
+          type: bard
+          spellcheck: true
+          allow_source: true
+          autoLink: true
+          target_blank: false
+          link_validation: true
+          force_plain_text: true
+          clean_pasted_html: true
+          restrict_assets: false
+          display: 'Page Content'
+          validate: required
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: navigation_location
+        field:
+          type: select
+          options:
+            '': 'Secondary (Right)'
+            primary: 'Primary (Left)'
+            hidden: Hidden
+          inline: false
+          display: 'Navigation Location'
+          default: secondary
+      -
+        handle: section_icon
+        field:
+          type: assets
+          container: theme-assets
+          folder: /
+          restrict: true
+          max_files: 1
+          mode: list
+          display: 'Section icon'
+      -
+        handle: opengraph_image
+        field:
+          type: assets
+          container: main
+          folder: /
+          restrict: false
+          max_files: 1
+          instructions: 'Image shown on Social Media (falls back to site default)'
+          display: 'OpenGraph Image'
+taxonomies: true
+title: Section

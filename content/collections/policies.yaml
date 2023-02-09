@@ -1,0 +1,7 @@
+title: Policies
+route: '/policy/{year}/{slug}'
+date: true
+date_behavior:
+  past: public
+  future: unlisted
+sort_dir: desc

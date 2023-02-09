@@ -1,0 +1,122 @@
+title: Globals
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: site_name
+        field:
+          type: text
+          display: 'Website Name'
+          instructions: 'The name of your website'
+          localizable: true
+          width: 50
+      -
+        handle: site_description
+        field:
+          type: textarea
+          display: 'Website Description'
+          instructions: 'A generalised blurb about the site - will be used by Google for indexing'
+          width: 50
+      -
+        handle: footer_quicklinks
+        field:
+          type: grid
+          mode: table
+          fields:
+            -
+              handle: name
+              field:
+                type: text
+                display: Name
+            -
+              handle: link
+              field:
+                type: text
+                display: 'Link / URL'
+                validate: url
+          display: 'Footer Quicklinks'
+      -
+        handle: underlogo_quicklinks
+        field:
+          type: grid
+          mode: table
+          fields:
+            -
+              handle: name
+              field:
+                type: text
+                display: Name
+            -
+              handle: pages
+              field:
+                type: entries
+                display: 'Choose Page'
+                collections:
+                  - pages
+                instructions_position: above
+                listable: hidden
+                visibility: visible
+                max_items: 1
+                mode: default
+                create: true
+          display: 'Underlogo Quicklinks'
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          reorderable: true
+      -
+        handle: prefooter_links
+        field:
+          type: grid
+          mode: stacked
+          fields:
+            -
+              handle: name
+              field:
+                type: text
+                display: Name
+            -
+              handle: blurb
+              field:
+                type: textarea
+                display: Blurb
+            -
+              handle: pages
+              field:
+                type: entries
+                display: 'Choose Page'
+                collections:
+                  - pages
+                instructions_position: above
+                listable: hidden
+                visibility: visible
+                max_items: 1
+                mode: default
+                create: true
+                width: 50
+            -
+              handle: icon
+              field:
+                type: assets
+                display: 'Select Icon'
+                container: theme-assets
+                max_files: 1
+                width: 50
+          display: 'Pre-Footer Links'
+          instructions: 'The Links Just above the Footer - and Also on the Homepage!'
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          reorderable: true
+      -
+        handle: global_opengraph_image
+        field:
+          type: assets
+          container: main
+          folder: /
+          restrict: false
+          max_files: 1
+          instructions: 'Default Image shown on Social Media for Posts'
+          display: 'OpenGraph Image'
+taxonomies: true

@@ -1,0 +1,55 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          display: Title
+          width: 100
+          validate: required
+      -
+        handle: media_outlet
+        field:
+          type: text
+          width: 50
+          display: 'Publisher / Outlet'
+      -
+        handle: media_author
+        field:
+          type: text
+          width: 50
+          display: Author
+      -
+        handle: mediadate
+        field:
+          type: date
+          allow_blank: false
+          allow_time: false
+          require_time: false
+          earliest_date: 'January 1, 1900'
+          width: 50
+          display: Date
+          validate: required
+      -
+        handle: media_link
+        field:
+          type: text
+          width: 50
+          display: 'Link / URL'
+          validate: url
+      -
+        handle: media_blurb
+        field:
+          type: textarea
+          display: Blurb
+      -
+        handle: media_thumbnail
+        field:
+          type: assets
+          display: Thumbnail
+          instructions: 'Optional Image to display'
+          container: main
+          max_files: 1
+title: 'Media Publication'

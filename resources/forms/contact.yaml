@@ -1,0 +1,8 @@
+title: 'Contact Form'
+email:
+  -
+    to: warren@forster.co.nz
+    from: '{{noreply@forster.co.nz}}'
+    reply_to: '{{email_address}}'
+    subject: 'Forster.co.nz Website Form Submission'
+    template: email

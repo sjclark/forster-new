@@ -1,0 +1,44 @@
+<header>
+
+  <nav class="navbar navbar-primary" role="menubar" aria-label="Main Menu">
+    <div class="container">
+
+      <div class="navbar-brand">
+        <a href="/" class="navbar-logo" aria-label="home">
+          <img class="is-hidden-touch" style="width: 100px" src="/assets/theme-assets/warren-logo-primary.svg" alt="Warren Forster">
+          <img class="is-hidden-desktop" style="width: 100px" src="/assets/theme-assets/warren-logo-invert.svg" alt="Warren Forster">
+        </a>
+        <a href="#mobile-menu" class="hamburger mburger has-text-white mburger--collapse">
+          <b></b>
+          <b></b>
+          <b></b>
+        </a>
+      </div>
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          {{ nav from="/" navigation_location:is="primary" }}
+            {{ unless no_results }}
+              <a href="{{ url }}" class="{{ if is_current }}is-active {{ /if }} navbar-item">
+                {{ title }}
+              </a>
+            {{ /unless }}
+          {{ /nav }}
+        </div>
+
+        <div class="navbar-end">
+          {{ nav from="/" navigation_location:not_in="hidden|primary" }}
+            {{ unless no_results }}
+              <a href="{{ url }}" class="{{ if is_current }}is-active {{ /if }} navbar-item">
+                {{ title }}
+              </a>
+            {{ /unless }}
+          {{ /nav }}
+        </div>
+      </div>
+
+
+    </div>
+  </nav>
+
+</header>

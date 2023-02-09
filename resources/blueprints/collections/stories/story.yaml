@@ -1,0 +1,134 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          display: Title
+          width: 50
+          validate: required
+          localizable: true
+      -
+        handle: subtitle
+        field:
+          type: text
+          width: 50
+          display: Sub-Title
+      -
+        handle: introduction
+        field:
+          type: textarea
+          display: Introduction
+          instructions: '(Optional) Displayed in a larger font above the main page content'
+      -
+        handle: content_rich
+        field:
+          type: bard
+          spellcheck: true
+          allow_source: true
+          autoLink: true
+          target_blank: false
+          link_validation: true
+          force_plain_text: true
+          clean_pasted_html: true
+          restrict_assets: false
+          display: 'Page Content'
+          validate: required
+          sets:
+            text:
+              display: 'Text Block'
+              type: text
+              fields: {  }
+            blockquote:
+              display: 'Blockquote Block'
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: markdown
+            buttons:
+              display: 'Buttons Block'
+              fields:
+                -
+                  handle: buttons
+                  field:
+                    type: replicator
+                    display: Buttons
+                    sets:
+                      button:
+                        display: Button
+                        fields:
+                          -
+                            handle: text
+                            field:
+                              type: text
+                              display: 'Button Text'
+                          -
+                            handle: link
+                            field:
+                              type: text
+                              display: 'Link URL'
+                          -
+                            handle: styling
+                            field:
+                              type: select
+                              width: 50
+                              default: Primary
+                              display: 'Link Styling'
+                              options:
+                                - Primary
+                                - Secondary
+                          -
+                            handle: offsite
+                            field:
+                              type: toggle
+                              display: 'Offsite Link?'
+                              width: 50
+                              instructions: 'Open link in New Tab / Window?'
+            youtube:
+              display: 'YouTube Embed'
+              fields:
+                -
+                  handle: youtubeid
+                  field:
+                    type: text
+                    display: 'Youtube Video ID Number'
+                    instructions: 'Copy and Paste the Youtube Video ID Number from the url'
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: 'Video Title'
+                    instructions: 'Title of the Embedded Video (Important for Accessibility)'
+      -
+        handle: related_links_name
+        field:
+          type: text
+          display: 'Related Links Section Name'
+          width: 25
+          validate: required
+          localizable: true
+          default: 'Related Links'
+      -
+        handle: related_links
+        field:
+          type: grid
+          mode: table
+          fields:
+            -
+              handle: text
+              field:
+                type: text
+                display: 'Link Text'
+            -
+              handle: link
+              field:
+                type: text
+                display: 'Link / URL'
+                validate: url
+          display: 'Related Links'
+          width: 75
+taxonomies: true
+title: Story

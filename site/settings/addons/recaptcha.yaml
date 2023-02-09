@@ -1,7 +1,0 @@
-forms:
-  - contact
-error_message: 'reCAPTCHA failed.'
-site_key: 6LfEbHMUAAAAALHf4E9lkjW2YATgJyZpt5xWQCXi
-secret: 6LfEbHMUAAAAAGxZ6Jmj8ztKzJy3bt43iFx83GjQ
-invisible: false
-multi_keys: false

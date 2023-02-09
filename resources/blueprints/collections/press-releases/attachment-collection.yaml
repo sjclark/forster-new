@@ -1,0 +1,39 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: template
+        field:
+          type: hidden
+          default: content
+      -
+        handle: title
+        field:
+          type: text
+          display: Title
+          width: 50
+          validate: required
+          localizable: true
+      -
+        handle: subtitle
+        field:
+          type: text
+          width: 50
+          display: Sub-Title
+      -
+        handle: introduction
+        field:
+          type: textarea
+          display: Introduction
+          instructions: '(Optional) Displayed in a larger font above the main page content'
+      -
+        handle: attachments
+        field:
+          type: assets
+          display: Attachments
+          instructions: 'Attach PDF Files'
+          restrict: true
+          container: press-release-assets
+          validate: 'mimes:pdf,doc,docx'
+title: 'Attachment Collection'

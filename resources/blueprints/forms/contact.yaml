@@ -1,0 +1,31 @@
+title: 'Contact Form'
+fields:
+  -
+    handle: name
+    field:
+      type: text
+      display: Name
+      validate: required
+      width: 4
+  -
+    handle: phone_number
+    field:
+      type: text
+      display: 'Phone Number'
+      validate: required
+      width: 4
+      listable: false
+  -
+    handle: email_address
+    field:
+      type: text
+      display: 'Email Address'
+      validate: email
+      width: 4
+  -
+    handle: message
+    field:
+      type: textarea
+      display: Message
+      width: 12
+      listable: false

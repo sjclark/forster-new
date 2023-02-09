@@ -1,0 +1,45 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: template
+        field:
+          type: hidden
+          default: content
+      -
+        handle: title
+        field:
+          type: text
+          display: Title
+          width: 50
+          validate: required
+          localizable: true
+      -
+        handle: subtitle
+        field:
+          type: text
+          width: 50
+          display: Sub-Title
+      -
+        handle: introduction
+        field:
+          type: textarea
+          display: Introduction
+          instructions: '(Optional) Displayed in a larger font above the main page content'
+      -
+        handle: content
+        field:
+          type: markdown
+          display: 'Page Content'
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: section_blurb
+        field:
+          type: textarea
+          display: 'Section Blurb'
+          instructions: 'This is the blurb that will be displayed on the (parent) section of this page.'
+taxonomies: true
+title: 'Collection Page Generic'

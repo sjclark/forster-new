@@ -61,6 +61,30 @@ return [
             'visibility' => 'public',
         ],
 
+'assets_main' => [
+    'driver' => 'local',
+    'root' => public_path('assets/main'),
+    'url' => '/assets/main',
+    'visibility' => 'public',
+    'throw' => false,
+],
+
+'assets_press-release-assets' => [
+    'driver' => 'local',
+    'root' => public_path('assets/press-release-assets'),
+    'url' => '/assets/press-release-assets',
+    'visibility' => 'public',
+    'throw' => false,
+],
+
+'assets_theme-assets' => [
+    'driver' => 'local',
+    'root' => public_path('assets/theme-assets'),
+    'url' => '/assets/theme-assets',
+    'visibility' => 'public',
+    'throw' => false,
+],
+
     ],
 
     /*

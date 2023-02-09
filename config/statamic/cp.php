@@ -39,6 +39,16 @@ return [
 
     'widgets' => [
         'getting_started',
+[
+    'type' => 'collection',
+    'collection' => 'press-releases',
+    'limit' => 10,
+],
+[
+    'type' => 'collection',
+    'collection' => 'publications',
+    'limit' => 10,
+],
     ],
 
     /*
@@ -56,7 +66,7 @@ return [
     |
     */
 
-    'date_format' => 'Y-m-d',
+    'date_format' => 'Y/n/d',
 
     /*
     |--------------------------------------------------------------------------
