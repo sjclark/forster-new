@@ -2,9 +2,9 @@
   <a href="{{ permalink }}" target="_blank" class="download-card" onclick="gtag('event', 'click', { 'event_category' : 'Downloads', 'event_label' : '{{ file_display_name }} ({{ basename }})'});">
     <div class="file-image" aria-hidden="true">
       {{ if extension === "pdf" }}
-        <img src="/assets/theme-assets/file-pdf-light.svg">
+        <img src="/assets/theme-assets/file-pdf-light.svg" alt="">
       {{ elseif extension === "doc" || extension === "docx" }}
-        <img src="/assets/theme-assets/file-word-light.svg">
+        <img src="/assets/theme-assets/file-word-light.svg" alt="">
       {{ /if }}
     </div>
     <div class="file-content">
