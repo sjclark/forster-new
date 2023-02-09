@@ -3,45 +3,42 @@
     <div class="columns">
       <article class="column is-8" aria-labelledby="aria-primary-title">
         {{ if introduction }}
-        <section class="content content-introduction is-medium">
-          {{ introduction }}
-        </section>
-        {{/if}}
+          <section class="content content-introduction is-medium">
+            {{ introduction }}
+          </section>
+        {{ /if }}
         <section class="content-primary">
           {{ content_rich }}
-          {{ partial src="sets/{type}" }}
+            {{ partial src="sets/{type}" }}
           {{ /content_rich }}
 
         </section>
       </article>
-
       {{ if related_links or sidebar_image }}
-      <div class="column is-offset-1">
-{{ if related_links }}
-        <aside>
-          <nav class="panel" aria-label="Related Navigation">
-            <div class="panel-heading">{{related_links_name}}</div>
-            <ul>
-              {{ related_links as="links"}}
-              <li>
-                <a href="{{link}}" class="panel-block">{{text}}</a>
-              </li>
-              {{ /related_links }}
-            </ul>
-          </nav>
-        </aside>
+        <div class="column is-offset-1">
+          {{ if related_links }}
+            <aside>
+              <nav class="panel" aria-label="Related Navigation">
+                <div class="panel-heading">{{ related_links_name }}</div>
+                <ul>
+                  {{ related_links as="links" }}
+                    <li>
+                      <a href="{{ link }}" class="panel-block">{{ text }}</a>
+                    </li>
+                  {{ /related_links }}
+                </ul>
+              </nav>
+            </aside>
+          {{ /if }}
+          {{ if sidebar_image }}
+            <aside>
+              {{ glide :src="sidebar_image" width='300' }}
+                <img src="{{ url }}" alt="{{ alt }}" />
+              {{ /glide }}
+            </aside>
+          {{ /if }}
+        </div>
       {{ /if }}
-{{ if sidebar_image }}
-<aside>
-            {{ assets:sidebar_image }}
-    <img src="{{ glide:url width='300' }}" alt="{{ alt | entities }}" />
-  {{ /assets:sidebar_image }}
-</aside>
-      {{ /if }}
-
-      </div>
-      {{ /if }}
-
     </div>
   </div>
 </section>
