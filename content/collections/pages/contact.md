@@ -1,15 +1,33 @@
 ---
+id: de627bca-7595-429e-9b41-ad58703916d7
+blueprint: contact
 template: contact
 title: Contact
 content_rich:
   -
-    type: text
-    text: '<p>Please be aware that Warren is unable to represent people in disputes with ACC as he now works with<a href="https://talkmeetresolve.co.nz/" target="_blank"> Talk - Meet - Resolve.</a> <br></p><p><b>In the meantime, sign up to our Mailing List and we''ll keep you informed. </b></p><p><br></p><hr>'
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'Please be aware that Warren is unable to represent people in disputes with ACC as he now works with '
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://talkmeetresolve.co.nz/'
+              rel: null
+              target: null
+              title: null
+        text: 'Talk Meet Resolve'
+      -
+        type: text
+        text: .
 related_links_name: 'Related Links'
 section_icon: /assets/theme-assets/icon-contact.svg
-id: de627bca-7595-429e-9b41-ad58703916d7
-published: true
 slug: contact
-blueprint: contact
+updated_by: 875d6790-3836-4664-8607-64af11fa750d
+updated_at: 1675922594
 ---
 Contact me, Niles.
