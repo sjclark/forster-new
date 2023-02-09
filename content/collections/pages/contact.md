@@ -24,10 +24,12 @@ content_rich:
       -
         type: text
         text: .
+  -
+    type: paragraph
 related_links_name: 'Related Links'
 section_icon: /assets/theme-assets/icon-contact.svg
 slug: contact
 updated_by: 875d6790-3836-4664-8607-64af11fa750d
-updated_at: 1675922594
+updated_at: 1675922943
 ---
 Contact me, Niles.
