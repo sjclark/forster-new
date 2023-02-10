@@ -16,3 +16,7 @@ yarn-error.log
 .DS_Store
 /.idea
 /.vscode
+/public/css/
+/public/js/
+/public/static/
+ploi.yml
